@@ -21,9 +21,9 @@ class AuthController extends Controller
         ]);
 
         $token = $user->createToken('main')->plainTextToken;
-        return response(compact('user','token'))
-        ->header('Access-Control-Allow-Origin', '*')
-        ->header('Access-Control-Allow-Methods', 'POST');
+        return response(compact('user','token'));
+        // ->header('Access-Control-Allow-Origin', '*')
+        // ->header('Access-Control-Allow-Methods', 'POST');
     }
     public function login(LoginRequest $request)
     {
